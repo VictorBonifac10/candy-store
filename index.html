@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS File-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Bootstrap File-->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.min.css">
+    <!--Tailwind Link-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--Remix Icon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <title>CupcakeHouse</title>
+</head>
+
+<body>
+    <header class="relative h-100 overflow-hidden">
+        <img src="./assets/img/bg.jpg" class="absolute inset-0 w-full h-full object-cover blur-xs" alt="confeitaria">
+        <div class="mask w-full h-full absolute top-0 left-0 z-1"></div>
+        <section class="relative z-2 flex flex-row justify-center items-center gap-[200px] pt-5 mt-5">
+            <div>
+                <div class="flex items-center gap-2 mb-5 ">
+                    <img src="./assets/img/logo.svg" class="w-13" alt="">
+                    <p class="text-5xl leading-none relative top-[13px] font-[Lobster,sans-serif] text-rose-400">
+                        Cupcake House</p>
+                </div>
+                <p class="font-urbanist mt-5 text-2xl font-semibold text-rose-400 mb-2">Delícias artesanais para todos
+                    os momentos</p>
+                <p class="font-urbanist max-w-[470px] text-white mt-0">Lorem ipsum dolor sit amet consectetur,
+                    adipisicing
+                    elit. Minus asperiores deleniti cupiditate quis, optio sit iure dolore omnis facere ipsam quam qui
+                    eos error non magni veritatis voluptas perferendis fugiat.</p>
+                <div class="flex items-center gap-2 mt-3">
+                    <button
+                        onclick="mudarVisual('./assets/img/doce (1).png','linear-gradient(109deg, rgba(136, 255, 162, 0.89) 15%, rgba(79, 151, 179, 0.573) 50%, rgba(255, 229, 247, 0.841) 85%)')"
+                        class="botoes verde">
+                        <img src="./assets/img/doce (1).png" class="w-9" alt="">
+                    </button>
+                    <button onclick="mudarVisual('./assets/img/doce (3).png')" class="botoes rosa">
+                        <img src="./assets/img/doce (3).png" class="w-9" alt="">
+                    </button>
+                    <button onclick="mudarVisual('/assets/img/doce (4).png')" class="botoes azul">
+                        <img src="./assets/img/doce (4).png" class="w-9" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-64 h-64 overflow-hidden">
+                <img id="img-header" src="./assets/img/doce (1).png"
+                    class="w-full h-full object-cover transition-opacity duration-1000 opacity-100" alt="">
+            </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    </main>
+    <!--Bootstrap Link-->
+    <script src="./assets/bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
