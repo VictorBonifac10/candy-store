@@ -16,6 +16,7 @@ body {
 }
 
 .mask {
+    
     background: linear-gradient(109deg, rgba(136, 221, 255, 0.89) 15%, rgba(79, 151, 179, 0.573) 50%, rgba(255, 229, 247, 0.841) 85%);
     transition: background 10s ease;
     /* aqui definimos a transição suave */
