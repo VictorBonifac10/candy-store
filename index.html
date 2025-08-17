@@ -9,73 +9,290 @@
     <!--Bootstrap File-->
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.min.css">
-    <!--Tailwind Link-->
+    <!--Tailwind File-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!--Remix Icon-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Cake House</title>
+    <!-- Incluindo jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Incluindo plugin animateNumber -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+
+    <title>Business Website</title>
 </head>
 
-<body>
-    <header class="relative h-100 overflow-hidden">
-        <!-- Background -->
-        <img src="./assets/img/bg.jpg" class="absolute inset-0 w-full h-full object-cover blur-xs z-0"
-            alt="confeitaria">
-
-        <!-- Máscara -->
+<body class="h-[100vh]">
+    <header class="relative flex justify-center gap-6 items-start h-[600px]">
+        <!-- Vídeo de fundo -->
+        <video src="./assets/video/bg.mp4" class="absolute top-0 left-0 w-full h-full object-cover z-0" preload="none"
+            autoplay muted loop></video>
         <div class="mask w-full h-full absolute top-0 left-0 z-1"></div>
 
-        <img id="img-bg" src="./assets/img/pngwing.com (3).png"
-            class="absolute inset-0 w-full h-full object-contain scale-120 z-2 pointer-events-none" alt="">
-
-        <!-- Conteúdo -->
-        <section class="relative z-3 flex flex-row justify-center items-center gap-[200px] pt-5 mt-5">
-            <!-- conteúdo aqui -->
-            <div>
-                <div class="flex items-center gap-2 mb-5 ">
+        <!-- Texto -->
+        <div class="flex justify-center p-3 mt-4 rounded-full">
+            <div
+                class="glassmorphism bg-black/9 backdrop-blur-[8px] relative z-10 p-3 flex flex-col justify-center items-center w-[520px] h-[520px] rounded-full border-5 border-dashed border-white">
+                <div class="flex items-center gap-2 mb-3">
                     <img src="./assets/img/logo.svg" class="w-13" alt="">
-                    <p class="text-5xl leading-none relative top-[13px] font-[Lobster,sans-serif] text-rose-400">
+                    <p
+                        class="font-lobster text-5xl leading-none relative top-[13px] font-[Lobster,sans-serif] text-rose-400">
                         Cake House</p>
                 </div>
-                <p class="font-urbanist mt-5 text-2xl font-semibold text-rose-400 mb-2">Delícias artesanais para todos
-                    os momentos</p>
-                <p class="font-urbanist max-w-[470px] text-white mt-0">Lorem ipsum dolor sit amet consectetur,
-                    adipisicing
-                    elit. Minus asperiores deleniti cupiditate quis, optio sit iure dolore omnis facere ipsam quam qui
-                    eos error non magni veritatis voluptas perferendis fugiat.</p>
-                <div class="flex items-center gap-2 mt-3">
-                    <button
-                        onclick="mudarVisual('./assets/img/doce (1).png', 'linear-gradient(109deg, rgba(136, 221, 255, 0.89) 15%, rgba(79, 151, 179, 0.573) 50%, rgba(255, 229, 247, 0.841) 85%)','./assets/img/confeito.png')"
-                        class="botoes rosa">
-                        <img src="./assets/img/doce (1).png" class="w-11" alt="icon">
-                    </button>
-                    <button
-                        onclick="mudarVisual('./assets/img/doce (4).png','linear-gradient(109deg, rgba(136, 255, 162, 0.89) 15%, rgba(79, 151, 179, 0.573) 50%, rgba(255, 229, 247, 0.841) 85%)', './assets/img/pngwing.com (3).png')"
-                        class="botoes verde">
-                        <img src="./assets/img/doce (4).png" class="w-15" alt="icon">
-                    </button>
-                    <button
-                        onclick="mudarVisual('/assets/img/doce (7).png', 'linear-gradient(109deg, rgba(255, 215, 160, 0.89) 15%, rgba(79, 151, 179, 0.573) 50%, rgba(255, 229, 247, 0.841) 85%)', './assets/img/GRAO.png')"
-                        class="botoes azul">
-                        <img src="./assets/img/doce (7).png" class="w-15" alt="icon">
-                    </button>
-                </div>
+                <p class="text-center text-white font-bold">
+                    Delícias artesanais para todos os momentos
+                </p>
+                <p class="text-white text-sm max-w-md text-center mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ad omnis? Incidunt recusandae
+                    sequi
+                    unde harum, expedita deserunt temporibus iusto modi quaerat sed illum natus animi, nihil veritatis
+                    vel
+                    eos?
+                </p>
+                <button type="button" class="box-effect bg-rose-400 text-white mt-4 px-4 py-2 rounded max-w-[200px]">
+                    View Details
+                </button>
             </div>
+        </div>
+    </header>
 
-            <div class="w-90 h-90 overflow-hidden p-[500px]">
-                <img id="img-header" src="./assets/img/doce (1).png"
-                    class="w-full h-full object-cover transition-opacity duration-1000 opacity-100" alt="">
-            </div>
+    <main class="bg-gray-100">
+        <section class="bg-rose-400 flex justify-center w-full p-4 ">
+            <article class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-2">
+                <!-- Card 1 -->
+                <div class="flex flex-col gap-1 justify-center items-center p-3 w-full bg-rose-300 rounded-2xl">
+                    <div class="flex gap-2 justify-center items-center">
+                        <div class="counter-section">
+                            <span class="count text-white text-4xl font-bold" id="statistics_count-1"
+                                data-statistics_percent="922">0</span>
+                        </div>
+                        <i class="ri-emotion-happy-fill text-white text-4xl"></i>
+                    </div>
+                    <p class="text-white text-2xl font-light mt-2">Clientes Satifeitos</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="flex flex-col gap-1 justify-center items-center p-3 w-full bg-rose-300 rounded-2xl">
+                    <div class="flex gap-2 justify-center items-center">
+                        <div class="counter-section">
+                            <span class="count text-white text-4xl font-bold" id="statistics_count-1"
+                                data-statistics_percent="12200">0</span>
+                        </div>
+                        <i class="ri-cake-3-fill text-white text-4xl"></i>
+                    </div>
+                    <p class="text-white text-2xl font-light mt-2">Pedidos</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col gap-1 justify-center items-center p-3 w-full bg-rose-300 rounded-2xl">
+                    <div class="flex gap-2 justify-center items-center">
+                        <div class="counter-section">
+                            <span class="count text-white text-4xl font-bold" id="statistics_count-1"
+                                data-statistics_percent="43">0</span>
+                        </div>
+                        <i class="ri-store-3-fill text-white text-4xl"></i>
+                    </div>
+                    <p class="text-white text-2xl font-light mt-2">Lojas pelo Brasil</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="flex flex-col gap-1 justify-center items-center p-3 w-full bg-rose-300 rounded-2xl">
+                    <div class="flex gap-2 justify-center items-center">
+                        <div class="counter-section">
+                            <span class="count text-white text-4xl font-bold" id="statistics_count-1"
+                                data-statistics_percent="5">0</span>
+                        </div>
+                        <i class="ri-star-fill text-white text-4xl"></i>
+                    </div>
+                    <p class="text-white text-2xl font-light mt-2">Estrelas 5/5</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="container bg-white mt-5 p-0">
+            <article class="flex flex-col md:flex-row justify-center items-start md:items-center p-0 gap-2 md:gap-5">
+                <!-- Texto -->
+                <div class="flex-1 p-0 md:pr-5">
+                    <p class="font-lobster text-5xl text-rose-400 font-semibold max-md:text-center">Sobre Nós</p>
+                    <p class="text-blue-950 mt-3 text-sm max-w-[500px] max-md:text-center">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ad omnis? Incidunt
+                        recusandae sequi unde harum, expedita deserunt temporibus iusto modi quaerat sed illum natus
+                        animi, nihil veritatis vel eos.<br><br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ad omnis? Incidunt recusandae
+                        sequi unde harum, expedita deserunt temporibus iusto modi quaerat sed illum natus animi, nihil
+                        veritatis vel eos?
+                    </p>
+                    <div class="box-second-main p-0 mt-3">
+                        <div
+                            class="flex flex-col gap-4 md:flex-row md:gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-[450px]">
+                            <i
+                                class="ri-number-1 w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
+                            <div class="flex flex-col gap-1 text-blue-950">
+                                <p class="text-sm font-semibold m-0 p-0">Desktop & Mobile Version</p>
+                                <p class="text-sm m-0 p-0">Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-4 md:flex-row md:gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-[450px]">
+                            <i
+                                class="ri-number-2 w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
+                            <div class="flex flex-col gap-1 text-blue-950">
+                                <p class="text-sm font-semibold m-0 p-0">Builder Awesome</p>
+                                <p class="text-sm m-0 p-0">Veritatis porro magnam expedita voluptas tenetur</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-4 md:flex-row md:gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-[450px]">
+                            <i
+                                class="ri-number-3 w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
+                            <div class="flex flex-col gap-1 text-blue-950">
+                                <p class="text-sm font-semibold m-0 p-0">Modern Design</p>
+                                <p class="text-sm m-0 p-0">Esse illo dignissimos consequatur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="flex-shrink-0">
+                    <img src="./assets/img/vitrine.jpg" class="w-[400px] max-w-full" alt="">
+                </div>
+            </article>
+        </section>
+
+
+        <section class="container bg-[rgb(204,102,34)] pt-5 pb-3 mt-5 mb-5 flex flex-col justify-center items-center">
+            <p class="text-3xl font-semibold p-0 mb-3 text-white max-md:text-center">Desktop & Mobile Version</p>
+            <p class="text-sm p-0 m-0 text-center max-w-150 text-white">Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam qui
+                totam mollitiadebitis ipsum hic porro, rem excepturi. Nesciunt, corrupti!</p>
+            <div class="w-20 h-1 bg-white rounded-full mt-3 mb-3"></div>
+            <img src="./assets/img/computer.svg" class="p-3" width="500px" alt="computer">
+        </section>
+
+        <section class="container bg-white p-5 mt-5 mb-5 flex flex-col justify-center items-center">
+            <p class="text-3xl font-semibold p-0 mb-3 text-blue-950 max-md:text-center">Benifits you will love & enjoy
+            </p>
+            <p class="text-sm p-0 m-0 text-center max-w-150 text-blue-950">Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam qui
+                totam mollitiadebitis ipsum hic porro, rem excepturi. Nesciunt, corrupti!</p>
+            <div class="w-20 h-1 bg-blue-950 rounded-full mt-3 mb-3"></div>
+            <article class="container flex p-3 justify-center items-center gap-4 max-md:flex-col">
+                <div class="flex flex-col justify-center items-center p-0 box-effect">
+                    <img src="./assets/img/no-paper.svg" class="p-4" width="200px" alt="img">
+                    <p class="text-base font-semibold mt-3 mb-0 text-blue-950">No papers more</p>
+                    <p class="text-sm p-2 mt-0 mb-3 text-center max-w-70 text-blue-950">Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit.
+                    </p>
+                </div>
+                <div class="flex flex-col justify-center items-center p-0 box-effect">
+                    <img src="./assets/img/chart.svg" class="p-4" width="200px" alt="img">
+                    <p class="text-base font-semibold mt-3 mb-0 text-blue-950">Analytics by charts</p>
+                    <p class="text-sm p-2 mt-0 mb-3 text-center max-w-70 text-blue-950">Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit.
+                    </p>
+                </div>
+                <div class="flex flex-col justify-center items-center p-0 box-effect">
+                    <img src="./assets/img/network.svg" class="p-4" width="200px" alt="img">
+                    <p class="text-base font-semibold mt-3 mb-0 text-blue-950">Network for group</p>
+                    <p class="text-sm p-2 mt-0 mb-3 text-center max-w-70 text-blue-950">Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="container bg-[rgb(204,102,34)] p-3 mt-5 mb-5">
+            <article class="flex gap-3 justify-center items-center max-md:flex-col">
+                <img src="./assets/img/person.jpg" class="rounded-full p-2" width="180px" alt="person">
+                <div>
+                    <p class="text-base p-2 m-0 text-white max-w-180 text-justify">"Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab
+                        perspiciatis laboriosam qui totam mollitiadebitis ipsum hic porro, rem excepturi. Nesciunt,
+                        corrupti, perspiciatis laboriosam qui totam mollitiadebitis ipsum hic porro, rem excepturi.
+                        Nesciunt, corrupti!"</p>
+                    <p class="text-base p-2 font-bold mt-2 text-blue-950 max-md:text-center"> Jonathan Doe | FlatVault
+                        Client</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="container p-2 mt-5 mb-5">
+            <article class="flex gap-5 justify-center items-center max-md:flex-col">
+                <div class="bg-gray-200 flex flex-col justify-center items-center p-3 w-full">
+                    <p
+                        class="card-price-text p-2 bg-[rgb(204,102,34)] m-2 rounded-full w-35 h-35 flex justify-center items-center text-white text-5xl">
+                        $55</p>
+                    <p class="text-lg font-bold text-blue-950 mt-2">Basic Pricing</p>
+                    <div class="w-20 h-1 bg-orange-300 rounded-full mb-1"></div>
+                    <ul class="flex flex-col justify-center items-center list-none p-3 gap-2">
+                        <li class="text-sm text-blue-950">Blog Page</li>
+                        <li class="text-sm text-blue-950">Frameworks for company</li>
+                        <li class="text-sm text-blue-950">Dashboards feedback</li>
+                        <li class="text-sm text-blue-950">Database Category</li>
+                    </ul>
+                    <button class="box-effect btn-price p-3 bg-[rgb(204,102,34)] text-white">View Details</button>
+                </div>
+                <div class="levitating bg-[rgb(204,102,34)] flex flex-col justify-center items-center p-3 w-full">
+                    <p
+                        class="card-price-text p-2 bg-gray-100 m-2 rounded-full w-35 h-35 flex justify-center items-center text-blue-950 text-5xl">
+                        $75</p>
+                    <p class="text-lg font-bold text-blue-950 mt-2">Pro Pricing</p>
+                    <div class="w-20 h-1 bg-orange-300 rounded-full mb-1"></div>
+                    <ul class="flex flex-col justify-center items-center list-none p-3 gap-2">
+                        <li class="text-sm text-white">Blog Page</li>
+                        <li class="text-sm text-white">Frameworks for company</li>
+                        <li class="text-sm text-white">Dashboards feedback</li>
+                        <li class="text-sm text-white">Database Category</li>
+                    </ul>
+                    <button class="box-effect btn-price p-3 bg-white text-blue-950">View Details</button>
+                </div>
+                <div class="bg-gray-200 flex flex-col justify-center items-center p-3 w-full">
+                    <p
+                        class="card-price-text p-2 bg-[rgb(204,102,34)] m-2 rounded-full w-35 h-35 flex justify-center items-center text-white text-5xl">
+                        $100</p>
+                    <p class="text-lg font-bold text-blue-950 mt-2">Elite Pricing</p>
+                    <div class="w-20 h-1 bg-orange-300 rounded-full mb-1"></div>
+                    <ul class="flex flex-col justify-center items-center list-none p-3 gap-2">
+                        <li class="text-sm text-blue-950">Blog Page</li>
+                        <li class="text-sm text-blue-950">Frameworks for company</li>
+                        <li class="text-sm text-blue-950">Dashboards feedback</li>
+                        <li class="text-sm text-blue-950">Database Category</li>
+                    </ul>
+                    <button class="box-effect btn-price p-3 bg-[rgb(204,102,34)] text-white">View Details</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="bg-blue-950 pt-5 pb-5 flex flex-col justify-center items-center m-0 w-full">
+            <p class="text-3xl font-semibold p-0 mb-3 text-white max-md:text-center">Join us now for a 30 day free trial
+            </p>
+            <p class="text-sm p-0 m-0 text-center max-w-150 text-white">Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam qui
+                totam mollitiadebitis ipsum hic porro, rem excepturi. Nesciunt, corrupti!</p>
+            <div class="w-20 h-1 bg-white rounded-full mt-3 mb-4"></div>
+            <button class="box-effect p-3 w-70 bg-[rgb(204,102,34)] text-white">Join now</button>
+            <p class="text-sm p-0 mt-5 text-center text-white">Dolores nostrum nihil sunt tenetur delectus vitae quis ab
+                perspiciatis :)</p>
+            <div class="flex gap-4">
+                <i
+                    class="box-effect bg-[rgb(204,102,34)] text-white p-2 w-10 flex justify-center items-center ri-facebook-fill cursor-pointer"></i>
+                <i
+                    class="box-effect bg-[rgb(204,102,34)] text-white p-2 w-10 flex justify-center items-center ri-instagram-fill cursor-pointer"></i>
+                <i
+                    class="box-effect bg-[rgb(204,102,34)] text-white p-2 w-10 flex justify-center items-center ri-youtube-fill cursor-pointer"></i>
             </div>
         </section>
-    </header>
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
     </main>
+    <footer class="bg-blue-950 p-4 flex justify-center items-center m-0 w-full">
+        <p class="text-sm text-white">© 2025 FlatVault - All rights reserved.</p>
+    </footer>
+
+    <!--JS File-->
+    <script src="./script/script.js"></script>
     <!--Bootstrap Link-->
     <script src="./assets/bootstrap/js/bootstrap.js"></script>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./script/script.js"></script>
+
 </body>
 
 </html>

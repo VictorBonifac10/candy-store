@@ -1,51 +1,67 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-body {
-    height: 100vh;
+header {
+    padding: 0px 100px 20px 100px;
 }
 
 .mask {
-    
-    background: linear-gradient(109deg, rgba(136, 221, 255, 0.89) 15%, rgba(79, 151, 179, 0.573) 50%, rgba(255, 229, 247, 0.841) 85%);
-    transition: background 10s ease;
-    /* aqui definimos a transição suave */
+    background: linear-gradient(109deg, rgba(0, 170, 255, 0.399) 15%, rgba(70, 70, 70, 0.415) 50%, rgba(255, 0, 93, 0.399) 85%);
 }
 
-.font-urbanist {
-    font-family: "Urbanist", serif;
+.font-lobster{
+    font-family: "Lobster", sans-serif;
 }
 
-/* fade out e fade in */
-@keyframes fadeSwap {
-    0% {
-        opacity: 1;
+form {
+    width: 370px;
+    height: 500px;
+}
+
+input {
+    border: 1px solid #fff;
+}
+
+.levitating {
+    animation: levitating 5s ease-in-out infinite;
+}
+
+@keyframes levitating {
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
 
     50% {
-        opacity: 0;
-    }
-
-    51% {
-        opacity: 0;
-    }
-
-    /* aqui o JS troca a imagem */
-    100% {
-        opacity: 1;
+        transform: translateY(-30px);
     }
 }
 
-.troca-efeito {
-    animation: fadeSwap 1s forwards;
+.box:hover {
+    background-color: rgb(0, 0, 40);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.box-effect:hover {
+    background-color: rgb(240, 240, 240);
+    color: rgb(204, 102, 34) !important;
+    transition: 0.1s;
+}
+
+.glassmorphism:hover {
+    transform: scale(1.1);
+    border-radius: 50%;
+    transition: 1s;
+    background-color: rgba(37, 35, 27, 0.484);
 }

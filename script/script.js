@@ -1,25 +1,20 @@
-const imgHeader = document.querySelector('#img-header');
-const imgHeaderCustom = document.querySelector('#img-bg');
-const mask = document.querySelector('.mask');
+ $(document).ready(function() {
+            // Seleciona todos os contadores
+            const counters = $(".counter-section .count");
 
-function mudarVisual(novaImagem, novaCor, imgFundo) {
-    // começa fade out
-    imgHeader.classList.remove('opacity-100');
-    imgHeader.classList.add('opacity-0');
-    imgHeaderCustom.classList.remove('opacity-100');
-    imgHeaderCustom.classList.add('opacity-0');
+            // Cria observer
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        const $this = $(entry.target);
+                        const target = parseInt($this.data("statistics_percent"));
+                        $this.animateNumber({ number: target }, 4000);
+                        obs.unobserve(entry.target); // garante que só anima uma vez
+                    }
+                });
+            }, { threshold: 0.5 }); // anima quando 50% visível
 
-    // troca a imagem **meio fade**, para o efeito contínuo
-    setTimeout(() => {
-        imgHeader.src = novaImagem;
-        imgHeaderCustom.src = imgFundo;
-        // fade in
-        imgHeader.classList.remove('opacity-0');
-        imgHeader.classList.add('opacity-100');
-        imgHeaderCustom.classList.remove('opacity-0');
-        imgHeaderCustom.classList.add('opacity-100');
-
-    }, 500); // metade da duração da animação
-
-    mask.style.background = novaCor;
-}
+            counters.each(function() {
+                observer.observe(this);
+            });
+        });
