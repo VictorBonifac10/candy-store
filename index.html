@@ -13,12 +13,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!--Remix Icon-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Biblioteca AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Incluindo jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Incluindo plugin animateNumber -->
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
-    <title>Business Website</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/logo.svg" type="image/x-icon">
+    <title>Cake House Online | Confeitaria</title>
 </head>
 
 <body class="h-[100vh]">
@@ -28,29 +32,34 @@
         <video src="./assets/video/bg.mp4" class="absolute top-0 left-0 w-full h-full object-cover z-0" preload="none"
             autoplay muted loop></video>
         <div class="mask w-full h-full absolute top-0 left-0 z-1"></div>
-        <div class="flex justify-center p-3 mt-4 rounded-full">
-            <div
-                class="glassmorphism bg-black/9 backdrop-blur-[8px] relative z-10 p-3 flex flex-col justify-center items-center w-[520px] h-[520px] rounded-full border-5 border-dashed border-white">
-                <div class="flex items-center gap-2 mb-3">
-                    <img src="./assets/img/logo.svg" class="w-13" alt="">
-                    <p
-                        class="font-lobster text-5xl leading-none relative top-[13px] font-[Lobster,sans-serif] text-rose-400">
-                        Cake House</p>
+        <div class="relative flex items-center justify-center max-h-200">
+            <div class="flex justify-center p-3 mt-4 rounded-full max-md:p-5">
+                <div class="glassmorphism bg-black/9 backdrop-blur-[8px] relative z-10 p-3 flex flex-col justify-center items-center w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] md:w-[520px] md:h-[520px] rounded-full border-5 border-dashed border-white">
+
+                    <div class="flex items-center gap-2 mb-2">
+                        <img src="./assets/img/logo.svg" class="w-8 sm:w-10 md:w-12" alt="">
+                        <p
+                            class="font-lobster text-2xl sm:text-3xl md:text-4xl leading-none relative top-[8px] font-[Lobster,sans-serif] text-rose-400">
+                            Cake House
+                        </p>
+                    </div>
+
+                    <div class="w-12 sm:w-14 md:w-15 h-1 bg-rose-400 rounded-full mb-6"></div>
+
+                    <p class="text-center text-white font-bold mt-3 text-sm sm:text-base">
+                        Delícias artesanais para todos os momentos
+                    </p>
+
+                    <p class="text-white text-xs sm:text-sm max-w-xs sm:max-w-md text-center mt-1">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ad omnis? Incidunt recusandae
+                        sequi unde harum, expedita deserunt temporibus iusto modi quaerat sed illum natus animi, nihil
+                        veritatis vel eos?
+                    </p>
+
+                    <button type="button" class="box-effect bg-rose-400 text-white mt-1 px-2 py-1 sm:px-3 sm:py-2 rounded max-w-[100px] sm:max-w-[140px] md:max-w-[160px] text-[6px] sm:text-xs md:text-xs">
+                        Descubra mais
+                    </button>
                 </div>
-                <div class="w-15 h-1 bg-rose-400 rounded-full mb-6"></div>
-                <p class="text-center text-white font-bold mt-3">
-                    Delícias artesanais para todos os momentos
-                </p>
-                <p class="text-white text-sm max-w-md text-center mt-1">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ad omnis? Incidunt recusandae
-                    sequi
-                    unde harum, expedita deserunt temporibus iusto modi quaerat sed illum natus animi, nihil veritatis
-                    vel
-                    eos?
-                </p>
-                <button type="button" class="box-effect bg-rose-400 text-white mt-4 px-4 py-2 rounded max-w-[200px]">
-                    Descubra mais
-                </button>
             </div>
         </div>
     </header>
@@ -111,68 +120,72 @@
             </article>
         </section>
         <!--About Us Section-->
-        <section class="container bg-white mt-5">
-            <article class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex-1 p-5 flex flex-col items-center md:items-start">
-                    <p class="font-lobster text-5xl font-semibold text-rose-400 text-center md:text-left">
-                        Nossa História
-                    </p>
-                    <div class="w-20 h-1 bg-rose-400 rounded-full mt-1 mb-6"></div>
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <section class="container bg-white mt-5">
+                <article class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="flex-1 p-5 flex flex-col items-center md:items-start">
+                        <p class="font-lobster text-5xl font-semibold text-rose-400 text-center md:text-left">
+                            Nossa História
+                        </p>
+                        <div class="w-20 h-1 bg-rose-400 rounded-full mt-1 mb-6"></div>
 
-                    <p class="text-blue-950 mt-3 text-sm max-md:text-center max-w-xl">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ad omnis?
-                        Incidunt recusandae sequi unde harum, expedita deserunt temporibus iusto modi
-                        quaerat sed illum natus animi, nihil veritatis vel eos.<br><br>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ad omnis?
-                        Incidunt recusandae sequi unde harum, expedita deserunt temporibus iusto modi
-                        quaerat sed illum natus animi, nihil veritatis vel eos?
-                    </p>
+                        <p class="text-blue-950 mt-3 text-sm max-md:text-center max-w-xl">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ad omnis?
+                            Incidunt recusandae sequi unde harum, expedita deserunt temporibus iusto modi
+                            quaerat sed illum natus animi, nihil veritatis vel eos.<br><br>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ad omnis?
+                            Incidunt recusandae sequi unde harum, expedita deserunt temporibus iusto modi
+                            quaerat sed illum natus animi, nihil veritatis vel eos?
+                        </p>
 
-                    <div class="box-second-main p-0 mt-6 flex flex-col gap-1 items-center md:items-start">
-                        <div
-                            class="flex flex-col md:flex-row gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-full max-w-md transition-all hover:bg-gray-100 hover:scale-105">
-                            <i
-                                class="ri-medal-fill w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
-                            <div class="flex flex-col gap-1 text-blue-950">
-                                <p class="text-sm font-semibold m-0 p-0">Qualidade de 1º linha</p>
-                                <p class="text-sm m-0 p-0">Lorem ipsum dolor sit amet consectetur</p>
+                        <div class="box-second-main p-0 mt-6 flex flex-col gap-1 items-center md:items-start">
+                            <div
+                                class="flex flex-col md:flex-row gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-full max-w-md transition-all hover:bg-gray-100 hover:scale-105">
+                                <i
+                                    class="ri-medal-fill w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
+                                <div class="flex flex-col gap-1 text-blue-950">
+                                    <p class="text-sm font-semibold m-0 p-0">Qualidade de 1º linha</p>
+                                    <p class="text-sm m-0 p-0">Lorem ipsum dolor sit amet consectetur</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div
-                            class="flex flex-col md:flex-row gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-full max-w-md transition-all hover:bg-gray-100 hover:scale-105">
-                            <i
-                                class="ri-bread-line w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
-                            <div class="flex flex-col gap-1 text-blue-950">
-                                <p class="text-sm font-semibold m-0 p-0">Variedade em doces e panificação</p>
-                                <p class="text-sm m-0 p-0">Veritatis porro magnam expedita voluptas tenetur</p>
+                            <div
+                                class="flex flex-col md:flex-row gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-full max-w-md transition-all hover:bg-gray-100 hover:scale-105">
+                                <i
+                                    class="ri-bread-line w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
+                                <div class="flex flex-col gap-1 text-blue-950">
+                                    <p class="text-sm font-semibold m-0 p-0">Variedade em doces e panificação</p>
+                                    <p class="text-sm m-0 p-0">Veritatis porro magnam expedita voluptas tenetur</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div
-                            class="flex flex-col md:flex-row gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-full max-w-md transition-all hover:bg-gray-100 hover:scale-105">
-                            <i
-                                class="ri-24-hours-fill w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
-                            <div class="flex flex-col gap-1 text-blue-950">
-                                <p class="text-sm font-semibold m-0 p-0">Atendimento 24 horas</p>
-                                <p class="text-sm m-0 p-0">Esse illo dignissimos consequatur</p>
+                            <div
+                                class="flex flex-col md:flex-row gap-3 items-center p-3 box-effect rounded-full max-md:text-center w-full max-w-md transition-all hover:bg-gray-100 hover:scale-105">
+                                <i
+                                    class="ri-24-hours-fill w-8 h-8 flex justify-center items-center bg-rose-400 text-white rounded-full"></i>
+                                <div class="flex flex-col gap-1 text-blue-950">
+                                    <p class="text-sm font-semibold m-0 p-0">Atendimento 24 horas</p>
+                                    <p class="text-sm m-0 p-0">Esse illo dignissimos consequatur</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex-shrink-0 flex justify-center md:justify-end w-full md:w-auto">
-                    <img src="./assets/img/vitrine-2.jpg"
-                        class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-full object-contain transition-all hover:scale-105"
-                        alt="Imagem vitrine">
-                </div>
-            </article>
-        </section>
+                    <div class="flex-shrink-0 flex justify-center md:justify-end w-full md:w-auto">
+                        <img src="./assets/img/vitrine-2.jpg"
+                            class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-full object-contain transition-all hover:scale-105"
+                            alt="Imagem vitrine">
+                    </div>
+                </article>
+            </section>
+        </div>
         <!--Products Section-->
         <section class="container bg-rose-400 pt-5 pb-3 mt-5 mb-5 flex flex-col justify-center items-center">
-            <p class="font-lobster text-5xl font-semibold p-0 mb-3 text-white max-md:text-center">Catálogo de produtos
+            <p class="font-lobster text-5xl font-semibold p-0 mb-3 text-white max-md:text-center">Catálogo de
+                produtos
             </p>
             <p class="text-sm p-0 m-0 text-center max-w-150 text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur
+                delectus
                 vitae quis ab perspiciatis!
             </p>
             <div class="w-20 h-1 bg-white rounded-full mt-3 mb-6"></div>
@@ -316,40 +329,44 @@
             </div>
         </section>
         <!--Clients Section-->
-        <div class="flex flex-col justify-center items-center">
-            <p class="font-lobster text-5xl font-semibold p-0 mb-3 text-rose-400 max-md:text-center">Nossos Clientes
-            </p>
-            <p class="text-sm p-0 m-0 text-center max-w-150 text-gray-400">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus
-                vitae quis ab perspiciatis!
-            </p>
-            <div class="w-20 h-1 bg-rose-400 rounded-full mt-3 mb-6"></div>
-        </div>
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex flex-col justify-center items-center">
+                <p class="font-lobster text-5xl font-semibold p-0 mb-3 text-rose-400 max-md:text-center">Nossos Clientes
+                </p>
+                <p class="text-sm p-0 m-0 text-center max-w-150 text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur
+                    delectus
+                    vitae quis ab perspiciatis!
+                </p>
+                <div class="w-20 h-1 bg-rose-400 rounded-full mt-3 mb-6"></div>
+            </div>
 
-        <section class="container flex flex-row justify-center items-center gap-4 mt-5 mb-5">
-            <article
-                class="flex gap-1 justify-center bg-white items-center max-md:flex-col transition-all hover:scale-105">
-                <img src="./assets/img/mulher (1).jpg" class="rounded-full p-3" width="180px" alt="person">
-                <div>
-                    <p class="text-sm p-4 m-0 text-blue-950 max-w-180 text-justify">"Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab
-                        perspiciatis laboriosam qui totam mollitiadebitis ipsum hic por!"</p>
-                    <p class="text-base p-4 pt-0 font-bold text-rose-400 max-md:text-center"> Sara Abrão | Cliente
-                        Cake House</p>
-                </div>
-            </article>
-            <article
-                class="flex gap-1 justify-center bg-white items-center max-md:flex-col transition-all hover:scale-105">
-                <img src="./assets/img/mulher (2).jpg" class="rounded-full p-3" width="180px" alt="person">
-                <div>
-                    <p class="text-sm p-4 m-0 text-blue-950 max-w-180 text-justify">"Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab
-                        perspiciatis laboriosam qui totam mollitiadebitis ipsum hic porr!"</p>
-                    <p class="text-base p-4 pt-0 font-bold text-rose-400 max-md:text-center"> Patrícia Amaro | Cliente
-                        Cake House</p>
-                </div>
-            </article>
-        </section>
+            <section class="container flex flex-row justify-center items-center gap-4 mt-5 mb-5">
+                <article
+                    class="flex gap-1 justify-center bg-white items-center max-md:flex-col transition-all hover:scale-105">
+                    <img src="./assets/img/mulher (1).jpg" class="rounded-full p-3" width="180px" alt="person">
+                    <div>
+                        <p class="text-sm p-4 m-0 text-blue-950 max-w-180 text-justify">"Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab
+                            perspiciatis laboriosam qui totam mollitiadebitis ipsum hic por!"</p>
+                        <p class="text-base p-4 pt-0 font-bold text-rose-400 max-md:text-center"> Sara Abrão | Cliente
+                            Cake House</p>
+                    </div>
+                </article>
+                <article
+                    class="flex gap-1 justify-center bg-white items-center max-md:flex-col transition-all hover:scale-105">
+                    <img src="./assets/img/mulher (2).jpg" class="rounded-full p-3" width="180px" alt="person">
+                    <div>
+                        <p class="text-sm p-4 m-0 text-blue-950 max-w-180 text-justify">"Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab
+                            perspiciatis laboriosam qui totam mollitiadebitis ipsum hic porr!"</p>
+                        <p class="text-base p-4 pt-0 font-bold text-rose-400 max-md:text-center"> Patrícia Amaro |
+                            Cliente
+                            Cake House</p>
+                    </div>
+                </article>
+            </section>
+        </div>
         <!--Contact Section-->
         <section class="bg-gray-300 pt-5 pb-5 flex flex-col justify-center items-center m-0 w-full">
             <p class="font-lobster text-3xl font-semibold p-0 mb-3 text-rose-400 max-md:text-center">Entre em contato
@@ -359,7 +376,7 @@
                 adipisicing elit. Dolores nostrum nihil sunt tenetur delectus vitae quis ab perspiciatis laboriosam qui
                 totam mollitiadebitis ipsum hic porro, rem excepturi. Nesciunt, corrupti!</p>
             <div class="w-20 h-1 bg-rose-400 rounded-full mt-3 mb-4"></div>
-            <button class="box-effect p-3 w-70 bg-rose-400 text-white">Join now</button>
+            <button class="box-effect p-3 w-70 bg-rose-400 text-white">Aproveite</button>
             <p class="text-sm p-0 mt-5 text-center text-blue-950">Dolores nostrum nihil sunt tenetur delectus vitae quis
                 ab
                 perspiciatis :)</p>
@@ -378,6 +395,8 @@
         <p class="text-sm text-rose-400">© 2025 FlatVault - All rights reserved.</p>
     </footer>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--JS File-->
     <script src="./script/script.js"></script>
     <!--Bootstrap Link-->
