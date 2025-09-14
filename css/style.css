@@ -33,3 +33,7 @@ header {
     transition: 1s;
     background-color: rgba(37, 35, 27, 0.484);
 }
+
+.catalog > div {
+  height: 100%;
+}

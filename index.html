@@ -27,8 +27,11 @@
 
 <body class="h-[100vh]">
 
-    <button class="fixed bottom-4 right-4 flex justify-center items-center cursor-pointer bg-rose-400 rounded-full p-2 w-10 h-10 shadow-lg mr-3 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-       <i class="ri-shopping-cart-fill text-lg text-white"></i>
+    <button
+        class="fixed bottom-4 right-4 flex justify-center items-center cursor-pointer bg-rose-400 rounded-full p-2 w-10 h-10 shadow-lg mr-3 mt-2 z-10"
+        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="ri-shopping-cart-fill text-lg text-white"></i>
+        <span class="cart-counter absolute -top-2 -right-2 bg-white text-rose-400 rounded-full text-xs w-5 h-5 flex items-center justify-center"></span>
     </button>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -36,8 +39,18 @@
             <p class="offcanvas-title font-lobster text-rose-400 text-3xl" id="offcanvasRightLabel">Seu Carrinho</p>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-            ...
+        <div class="offcanvas-body cart">
+            <ul class="productsCart flex flex-col items-center p-0 w-full h-[330px] overflow-auto">
+                <!--Itens Adicionados-->
+            </ul>
+            <div class="p-2">
+                <div class="flex justify-between items-center w-full">
+                    <p class="font-lobster text-3xl text-rose-400">Total: </p>
+                    <p class="total font-lobster text-2xl text-gray-400"></p>
+                </div>
+                <button
+                    class="buy not-first:bg-rose-400 text-white font-lobster text-9xl p-3 w-full hover:bg-rose-600 transition-all">Comprar<button>
+            </div>
         </div>
     </div>
 
@@ -206,7 +219,8 @@
                 vitae quis ab perspiciatis!
             </p>
             <div class="w-20 h-1 bg-white rounded-full mt-3 mb-6"></div>
-            <div class="catalog mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl px-2">
+            <div
+                class="catalog mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl px-2 items-stretch">
                 <!--Cards-->
             </div>
         </section>
