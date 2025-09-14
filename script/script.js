@@ -49,7 +49,7 @@ const updateCartTotal = () => {
 // --> Exibe os itens do catalogo no HTML
 
 const product = document.createElement('div');
-product.classList.add('h-full'); // <--- garante que o wrapper ocupe a célula da grid
+product.classList.add('h-full'); // --> garante que o wrapper ocupe a célula da grid
 
 products.forEach((element) => {
     const flavorOptions = element.flavors.map(flavor => `
@@ -102,7 +102,7 @@ products.forEach((element) => {
                 <p class="font-lobster m-0 text-lg text-gray-400">Quantidade: </p>
                 <div class="quantidade flex items-center gap-1">
                     <button class="less flex items-center justify-center rounded-full bg-rose-400 hover:bg-rose-600 text-white w-5 h-5">-</button>
-                    <input class="countNumberInput w-[30px] border-1 border-gray-400 rounded-lg" type="text" value="1">
+                    <input class="countNumberInput w-[30px] border-1 border-gray-400 rounded-lg text-center font-light text-gray-400" type="text" value="1">
                     <button class="more flex items-center justify-center rounded-full bg-rose-400 hover:bg-rose-600 text-white w-5 h-5">+</button>
                     <button class="delete text-gray-400 hover:text-gray-500">
                         <i class="ri-delete-bin-7-fill"></i>
@@ -171,18 +171,17 @@ products.forEach((element) => {
 
             if (items.length > 0) {
                 alert("Parabéns! Sua compra foi realizada com sucesso!");
-                productsCart.innerHTML = ""; // esvazia o carrinho
-                updateCartTotal(); // atualiza o total para zerar
-            } else {
-                alert("Não há itens no carrinho.");
+                productsCart.innerHTML = ""; //-->  esvazia o carrinho
+                updateCartTotal(); // --> atualiza o total para zerar
+                updateCartCounter(); // --> atualiza o counter
             }
         });
+    });
 
-        // --> Whatsapp Button
+    // --> Whatsapp Button
 
-        product.querySelector('.whatsApp').addEventListener('click', () => {
-            alert('WhatsApp indisponível no momento!');
-        });
+    product.querySelector('.whatsApp').addEventListener('click', () => {
+        alert('WhatsApp indisponível no momento!');
     });
 
     catalog.appendChild(product);
