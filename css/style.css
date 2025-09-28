@@ -12,28 +12,47 @@
     font-family: "Poppins", sans-serif;
 }
 
-/*Imports*/
+/*Header*/
+
 header {
     padding: 0px 100px 20px 100px;
 }
 
-/*Imports*/
+.header-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.offcanvas-body .navbar-nav .nav-item a {
+    color: #fb7185 !important; /* cor equivalente ao text-rose-400 */
+    text-decoration: none;
+}
+
+/*Effect*/
 .mask {
-    background: linear-gradient(109deg, rgba(0, 170, 255, 0.399) 15%, rgba(70, 70, 70, 0.415) 50%, rgba(255, 0, 93, 0.399) 85%);
+    background: linear-gradient(109deg, rgba(0, 127, 190, 0.821) 15%, rgba(65, 65, 65, 0.474) 50%, rgba(157, 0, 58, 0.31) 85%);
 }
 
 /*Font*/
-.font-lobster{
+.font-lobster {
     font-family: "Lobster", sans-serif;
 }
 
-/*Efeito*/
-.glassmorphism:hover {
-    transform: scale(1.07);
-    transition: 1s;
-    background-color: rgba(37, 35, 27, 0.484);
+/*Catalog*/
+
+.catalog>div {
+    height: 100%;
 }
 
-.catalog > div {
-  height: 100%;
+/*responsive*/
+
+@media (max-width: 768px) {
+    .header-bg {
+        object-fit: cover;
+    }
 }

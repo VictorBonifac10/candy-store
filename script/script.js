@@ -61,14 +61,18 @@ products.forEach((element) => {
 
     const product = document.createElement('div');
     product.innerHTML += `
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col justify-between h-full transition-all hover:scale-105">
-            <img src="${element.src}" alt="Doce 1" class="w-full h-40 object-cover">
-            <div class="p-4 flex flex-col justify-between flex-grow">
-                <h3 class="font-lobster not-first:text-xl font-bold text-rose-400 mb-2">${element.name}</h3>
-                <form class="flex flex-col space-y-2">
-                    ${flavorOptions}
-                </form>
-                <div class="flex justify-between items-center mt-auto gap-4">
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full transition-all hover:scale-105">
+        <img src="${element.src}" alt="Doce 1" class="w-full h-40 object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+            <h3 class="font-lobster not-first:text-xl font-bold text-rose-400 mb-2">${element.name}</h3>
+            <form class="flex flex-col space-y-2">
+                ${flavorOptions}
+            </form>
+            <div class="mt-auto">
+                <p class="font-lobster text-lg text-rose-400 mt-1 mb-3 ml-0 mr-0">
+                    ${element.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                </p>
+                <div class="flex justify-between items-center gap-4">
                     <button class="whatsApp flex items-center justify-center w-12 h-12 bg-rose-400 text-white hover:bg-rose-500 rounded-full">
                         <i class="ri-whatsapp-fill text-2xl"></i>
                     </button>
@@ -78,7 +82,9 @@ products.forEach((element) => {
                 </div>
             </div>
         </div>
-    `;
+    </div>
+`;
+
 
     product.querySelector('.addCart').addEventListener('click', () => {
         const form = product.querySelector('form');
