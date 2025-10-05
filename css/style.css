@@ -29,8 +29,13 @@ header {
 }
 
 .offcanvas-body .navbar-nav .nav-item a {
-    color: #fb7185 !important; /* cor equivalente ao text-rose-400 */
+    color: #fb7185 !important;
+    /* cor equivalente ao text-rose-400 */
     text-decoration: none;
+}
+
+.btn-social-media {
+    border-radius: 50px;
 }
 
 /*Effect*/
